@@ -1,0 +1,46 @@
+:root {
+  --colors: #647d87;
+  --colors: #f6d776;
+  --colors: #fa824c;
+  --colors: #faef9b;
+  --colors: #121619;
+
+  --primay: #647d87;
+  --primay-light: #6da4aa;
+  --primay-dark: #121619;
+  --secondary: #f6d776;
+  --secondary-light: #faef9b;
+  --contrast-color: #fa824c;
+}
+
+/* body {
+  background-color: var(--primay-light);
+} */
+
+.header {
+  height: 60px;
+  background-color: var(--primay-light);
+}
+.logo-container {
+  float: left;
+  padding: 5px 5px 5px 5px;
+}
+.logo-image {
+  height: 50px;
+  width: 50px;
+}
+.nav-bar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-bar ul li {
+  list-style: none;
+  margin: 10px 10px 10px 10px;
+}
+
+.nav-bar ul li a {
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+}
