@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+
+.row .column {
+  flex: 1 1 auto;
+}
