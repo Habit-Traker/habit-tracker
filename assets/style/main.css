@@ -69,9 +69,15 @@ body {
   font-size: larger;
 }
 
+.nav-bar a.active:hover,
 .nav-bar a:hover {
   transition: all ease 0.2s;
   background-color: var(--primay-light);
+}
+
+.nav-bar a.active {
+  background-color: rgb(from var(--contrast-color) r g b / 20%);
+  /* background-color: var(--primay-light); */
 }
 
 .body-section {
@@ -98,22 +104,31 @@ body {
   text-align: center;
   font-size: 35px;
   padding: 10px 3px 10px 3px;
-  background-color: rgb(from var(--contrast-color) r g b / 20%) ;
+  background-color: rgb(from var(--primay-light) r g b / 20%);
+}
+ul.habits-list {
+  padding: 0;
 }
 
 .habit-progress {
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 2fr 6fr;
+  margin: 40px 10px 40px 5px;
 }
 
+.habit-progress .habit-title {
+  margin: 0px 25px 0px 25px;
+}
 .habit-progress .habit-progress-bar {
   display: flex;
+  margin: 0 20px 0 0px;
 }
 
 .habit-progress .habit-progress-bar .daily-state {
-  width: 9%;
+  width: 10%;
   height: 25px;
-  flex: 0 0 9%;
+  flex: 0 0 10%;
+  max-width: 10%;
   margin: 1px;
 }
 
@@ -126,9 +141,9 @@ body {
 }
 
 .habit-progress .habit-progress-bar .done {
-  background-color: #00ff77;
+  background-color: var(--primay);
 }
 
 .habit-progress .habit-progress-bar .not-done {
-  background-color: #ff6830;
+  background-color: var(--contrast-color);
 }
