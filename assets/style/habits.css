@@ -25,5 +25,37 @@
 
 .body-section .habits-layout .habits-grid .habit-card .card-title {
   font-size: 25px;
-  color: color-mix(in srgb, var(--contrast-color) 80%, rgb(139, 136, 53));
+  color: color-mix(in srgb, var(--primary-dark) 50%, rgb(38, 82, 3));
+  background-color: aliceblue;
+  font-weight: bold;
+}
+
+.body-section .habits-layout .habits-grid .habit-card {
+  /* font-size: 25px; */
+  background-color: color-mix(
+    in srgb,
+    var(--secondary) 20%,
+    rgb(255, 255, 255)
+  );
+}
+
+.body-section .habits-layout .habits-grid .habit-card:hover .card-title {
+  /* font-size: 25px; */
+  background-color: color-mix(
+    in srgb,
+    var(--secondary-light) 20%,
+    rgb(255, 255, 255)
+  );
+}
+.body-section .habits-layout .habits-grid .habit-card:hover {
+  /* font-size: 25px; */
+  background-color: color-mix(
+    in srgb,
+    var(--secondary) 50%,
+    rgb(255, 255, 255)
+  );
+  transition: all ease 0.1s;
+}
+.body-section .habits-layout .habits-grid .habit-card .card-body {
+  padding: 10px;
 }

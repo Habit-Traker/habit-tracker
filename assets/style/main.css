@@ -5,15 +5,14 @@
   --colors: #faef9b;
   --colors: #121619;
 
-  --primary-dark: #647d87;
-  --primary: #79b791;
+  --primary-dark: #264653;
+  --primary: #2a9d8f;
   --primary-light: #abd1b5;
-  --secondary: #f6d776;
-  --secondary-light: #abd1b5;
+  --secondary: #f4a261;
+  --secondary-light: #e9c46a;
   --dark: #121619;
   --light: #edf4ed;
-  --contrast-color: #fa824c;
-  --primary: #79b791;
+  --contrast-color: #e76f51;
   
   /* 
   --primary-light: #abd1b5;
@@ -29,7 +28,7 @@
 }
 body {
   font-family: Signika;
-  background-image: url(../images/low-poly-crystal-background-vector-Graphics-9553863-1.jpg);
+  background-image: url(../images/203518.jpg);
   background-size: cover;
 
 }
@@ -86,11 +85,11 @@ body {
 .nav-bar a.active:hover,
 .nav-bar a:hover {
   transition: all ease 0.2s;
-  background-color: var(--primary);
+  background-color: rgb(from var(--primary) r g b / 40%);
 }
 
 .nav-bar a.active {
-  background-color: rgb(from var(--primary) r g b / 20%);
+  background-color: rgb(from var(--primary-light) r g b / 50%);
   /* background-color: var(--primary-light); */
 }
 
@@ -112,7 +111,7 @@ body {
   padding: 0px;
   margin: 5px;
   box-shadow: 2px 2px 5px #b0b0b0;
-  background-color: rgb(from var(--light) r g b / 70%);
+  background-color: rgb(from var(--primary-light) r g b / 70%);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   /* border: 1px solid rgba(255, 255, 255, 0.3); */
@@ -122,7 +121,7 @@ body {
   text-align: center;
   font-size: 35px;
   padding: 10px 3px 10px 3px;
-  background-color: rgb(from var(--primary-light) r g b / 20%);
+  background-color: rgb(from var(--primary-dark) r g b / 20%);
 }
 ul.habits-list {
   padding: 0;
