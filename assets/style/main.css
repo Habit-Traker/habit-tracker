@@ -5,12 +5,22 @@
   --colors: #faef9b;
   --colors: #121619;
 
-  --primay: #79b791;
-  --primay-light: #abd1b5;
+  --primary-dark: #647d87;
+  --primary: #79b791;
+  --primary-light: #abd1b5;
+  --secondary: #f6d776;
+  --secondary-light: #abd1b5;
+  --dark: #121619;
+  --light: #edf4ed;
+  --contrast-color: #fa824c;
+  --primary: #79b791;
+  
+  /* 
+  --primary-light: #abd1b5;
   --secondary: #555b6e;
   --dark: #121619;
   --light: #edf4ed;
-  --contrast-color: #d7816a;
+  --contrast-color: #d7816a; */
 }
 
 @font-face {
@@ -19,6 +29,9 @@
 }
 body {
   font-family: Signika;
+  background-image: url(../images/low-poly-crystal-background-vector-Graphics-9553863-1.jpg);
+  background-size: cover;
+
 }
 
 /* header */
@@ -26,6 +39,7 @@ body {
   /* height: 50px; */
   /* background-color: black; */
   /* background-color: var(--secondary-light); */
+  background-color: #fff;
   display: flex;
 }
 
@@ -61,7 +75,7 @@ body {
   height: 40px;
   text-align: center;
   text-decoration: none;
-  color: var(--primay-dark);
+  color: var(--primary-dark);
   padding: 24px 20px 0px 20px;
   width: 100px;
   /* background-color: var(--secondary-light); */
@@ -72,12 +86,12 @@ body {
 .nav-bar a.active:hover,
 .nav-bar a:hover {
   transition: all ease 0.2s;
-  background-color: var(--primay-light);
+  background-color: var(--primary);
 }
 
 .nav-bar a.active {
-  background-color: rgb(from var(--contrast-color) r g b / 20%);
-  /* background-color: var(--primay-light); */
+  background-color: rgb(from var(--primary) r g b / 20%);
+  /* background-color: var(--primary-light); */
 }
 
 .body-section {
@@ -98,13 +112,17 @@ body {
   padding: 0px;
   margin: 5px;
   box-shadow: 2px 2px 5px #b0b0b0;
+  background-color: rgb(from var(--light) r g b / 70%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .card .card-title {
   text-align: center;
   font-size: 35px;
   padding: 10px 3px 10px 3px;
-  background-color: rgb(from var(--primay-light) r g b / 20%);
+  background-color: rgb(from var(--primary-light) r g b / 20%);
 }
 ul.habits-list {
   padding: 0;
@@ -141,7 +159,7 @@ ul.habits-list {
 }
 
 .habit-progress .habit-progress-bar .done {
-  background-color: var(--primay);
+  background-color: var(--primary);
 }
 
 .habit-progress .habit-progress-bar .not-done {

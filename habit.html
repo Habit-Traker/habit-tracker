@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/habit.css">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/inputs.css">
+
+</head>
+
+<body>
+    <section class="header">
+        <div class="logo-container">
+            <img class="logo-image" src="assets/images/logo.png" alt="">
+            <div>My Title</div>
+        </div>
+        <nav class="nav-bar">
+            <a href="">Home</a>
+            <a href="">Habits</a>
+            <a href="">Diary</a>
+        </nav>
+    </section>
+
+    <section class="body-section">
+        <div class="container">
+            <div class="habit-section">
+                <div class="card">
+                    <div class="card-title">Habit:</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                <div class="habit-category">
+                                    <h2> Category :</h2>
+                                </div>
+
+                                <div class="habit-description">
+                                    <h2>description :</h2>
+                                </div>
+
+                                <div class="habit-achived">
+                                    <h2>Achived :</h2>
+                                </div>
+                            </li>
+                            <li class="habitcol-progress">
+                                <div>
+                                    <h2>Progress :</h2>
+                                </div>
+                            </li>
+                            <li class="habit-avg-reating">
+                                <div>
+                                    <h2>Avreage reating :</h2>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="habit-section">
+                <div class="card">
+                    <div class="card-title">Actions</div>
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="column input-col">
+                                <label for="">
+                                    today's note :
+                                </label>
+                                <input type="text" id="habit-note">
+                            </div>
+
+                            <div class="column input-col input-col-radios">Rate today's performance:<br>
+                                <input class="habit-radio" type="radio" name="habit-rating" value="1" />
+                                <label>
+                                    Poor
+                                </label>
+                                <input class="habit-radio" type="radio" name="habit-rating" value="2" />
+                                <label>
+                                    Fair
+                                </label>
+                                <input class="habit-radio" type="radio" name="habit-rating" value="3" />
+                                <label>
+                                    Good
+                                </label>
+                                <input class="habit-radio" type="radio" name="habit-rating" value="4" />
+                                <label>
+                                    Very Good
+                                </label>
+                                <input class="habit-radio" type="radio" name="habit-rating" value="5" />
+                                <label>
+                                    Excellent
+                                </label>
+
+                            </div>
+
+                            <div class="column input-col">Done :<br>
+                                <label>
+                                    <input class="habit-radio" type="radio" name="habit-done" value="1" />
+                                    Yes
+                                </label>
+                                <label>
+                                    <input class="habit-radio" type="radio" name="habit-done" value="0" />
+                                    NO<br>
+                                </label>
+
+                                <button id="add-day"> Submit current day</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="habbit.js"></script>
+</body>
+
+</html>

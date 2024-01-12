@@ -1,0 +1,82 @@
+.row .column.input-col * {
+  display: block;
+  /* text-align: center; */
+  /* margin: auto; */
+  width: 100%;
+}
+
+.row .column.input-col {
+  /* text-align: center; */
+  padding: 10px 20px 10px 20px;
+}
+
+.row .column.col-50 {
+  flex: 0 0 48%;
+}
+.row .column.col-33 {
+  flex: 0 0 30%;
+}
+
+.row .column.col-20 {
+  flex: 0 0 19%;
+}
+
+.row .column.col-90 {
+  flex: 0 0 88%;
+}
+.row .column.input-col .habit-input {
+  /* height: 35px; */
+  font-size: 20px;
+  padding: 5px 8px 5px 8px;
+  border: 1px solid var(--primay);
+  box-shadow: 2px 2px 5px #b0b0b0;
+  border-radius: 3px;
+  border: 1px solid #b0b0b0a8;
+}
+.row .column.input-col.input-col-radios * {
+  /* height: 35px; */
+  display: inline;
+  width: 30%;
+}
+.row .column.input-col input.habit-radio {
+ width: 10px;
+}
+
+.row .column.input-col textarea.habit-input {
+  /* height: 35px; */
+  font-size: 18px;
+  padding: 5px 8px 5px 8px;
+  border: 1px solid var(--primay);
+  box-shadow: 2px 2px 5px #b0b0b0;
+  border-radius: 3px;
+  border: 1px solid #b0b0b0a8;
+}
+
+.row .column.input-col button {
+  /* height: 35px; */
+  font-size: 18px;
+  padding: 5px 8px 5px 8px;
+  border: 1px solid var(--primay);
+  box-shadow: 2px 1px 3px #b0b0b0;
+  border-radius: 3px;
+  border: 1px solid #b0b0b0a8;
+  background-color: var(--primary-light);
+  padding-bottom: 10px;
+}
+
+.row .column.input-col button:hover {
+  /* height: 35px; */
+  cursor: pointer;
+  background-color: var(--primary);
+}
+
+.row .column.input-col button:active {
+  /* height: 35px; */
+  cursor: pointer;
+  background-color: var(--secondary-light);
+}
+
+.row .column.input-col .habit-input:focus {
+  /* height: 335px; */
+  border: 1px solid var(--primay);
+}
