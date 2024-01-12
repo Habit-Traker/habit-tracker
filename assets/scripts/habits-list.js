@@ -1,7 +1,6 @@
 // render habits function
 var renderHabits = function (habits) {
   $HabitsGrid.empty();
-
   each(habits, function (habit) {
     $HabitsGrid.append(habit.generateHabitCard());
   });
@@ -15,7 +14,6 @@ var $submitHabit = $("#add-habit");
 var $HabitsGrid = $(".habits-grid");
 
 renderHabits(storedHabits);
-
 
 $submitHabit.on("click", function () {
   var validInputs = $name.val() !== "" && $goal.val() !== "";
@@ -33,5 +31,5 @@ $submitHabit.on("click", function () {
   } else {
     alert("Invalid Inputs");
   }
+  location.reload();
 });
-
