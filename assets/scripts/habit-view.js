@@ -121,7 +121,7 @@ var habits = [
   habit15,
 ];
 
-var arr = findObject(habits, "id", Number(getURLHabit()));
+var arr = findObject(storedHabits, "id", Number(getURLHabit()));
 console.log(getURLHabit());
 $(".card-title").append(`${arr[0].name}`);
 $(".habit-category").append(`${arr[0].category}`);

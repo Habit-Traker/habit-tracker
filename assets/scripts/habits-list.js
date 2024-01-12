@@ -1,8 +1,18 @@
+// render habits function
+var renderHabits = function (habits) {
+  each(habits, function (habit) {
+    $HabitsGrid.append(habit.generateHabitCard());
+  });
+};
+
 var $name = $("#name");
 var $category = $("#category");
 var $description = $("#description");
 var $goal = $("#goal");
 var $submitHabit = $("#add-habit");
+var $HabitsGrid = $(".habits-grid");
+
+renderHabits(storedHabits);
 
 $submitHabit.on("click", function () {
   var validInputs = $name.val() !== "" && $goal.val() !== "";

@@ -11,7 +11,11 @@
   padding: 30px 20px 20px 20px;
 }
 
+.body-section .habits-layout .habits-grid .habit-card:link,
+.body-section .habits-layout .habits-grid .habit-card:visited,
 .body-section .habits-layout .habits-grid .habit-card {
+  text-decoration: none;
+  color: black;
   width: 30%;
   flex: 0 0 30%;
   max-width: 30%;
