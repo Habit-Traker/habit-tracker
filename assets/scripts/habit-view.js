@@ -66,7 +66,8 @@ var habit10 = Habit(
   "Fitness",
   "Practice yoga for 30 minutes daily",
   10,
-  HabitsID()
+  HabitsID(),
+  []
 );
 var habit11 = Habit(
   "Limit Screen Time",
@@ -103,6 +104,14 @@ var habit15 = Habit(
   10,
   HabitsID()
 );
+
+habit1.progress = habit1.progress.concat([
+  { note: "Feeling energized!", rate: 5, done: true },
+  { note: "Missed today", rate: 2, done: false },
+  { note: "Feeling energized!", rate: 5, done: true },
+  { note: "Done it", rate: 3, done: true },
+]);
+
 var habits = [
   habit1,
   habit2,
@@ -122,8 +131,19 @@ var habits = [
 ];
 
 var arr = findObject(habits, "id", Number(getURLHabit()));
+
 console.log(getURLHabit());
 $(".card-title").append(`${arr[0].name}`);
 $(".habit-category").append(`${arr[0].category}`);
 $(".habit-description").append(`${arr[0].description}`);
 $(".habit-achivedd").append(`${arr[0].goalAcheived}`);
+$(".habit-achived").append(`${arr[0].Acheived}`);
+console.log(arr[0]);
+each(arr[0].progress, function (element) {
+  console.log(element);
+  if (element.done === true) {
+    $(".habitcol-progress").append(`<div class="daily-state done">Yess</div>`);
+  } else {
+    $(".habitcol-progress").append(`<div class="daily-state done">NOOO</div>`);
+  }
+});

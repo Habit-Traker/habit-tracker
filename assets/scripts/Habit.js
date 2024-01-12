@@ -15,7 +15,15 @@ if (localStorage.getItem("lastHabitId")) {
 
 var HabitsID = generateID(lastHabitId);
 
-var Habit = function (name, category, description, goal, id) {
+var Habit = function (
+  name,
+  category,
+  description,
+  goal,
+  id,
+  streaks,
+  goalAcheived
+) {
   var instance = {};
   if (id === undefined) {
     instance.id = HabitsID();
@@ -23,17 +31,26 @@ var Habit = function (name, category, description, goal, id) {
   } else {
     instance.id = id;
   }
+
   instance.name = name;
   instance.description = description;
   instance.goal = goal;
   instance.category = category;
   instance.progress = [];
-  instance.streaks = 0; // How many days in a row
-  instance.goalAcheived = false;
+  if (streaks === undefined) {
+    instance.streaks = 0; // How many days in a row
+  } else {
+    instance.streaks = streaks; // How many days in a row
+  }
+  if (goalAcheived === undefined) {
+    instance.goalAcheived = false;
+  } else {
+    instance.goalAcheived = goalAcheived;
+  }
 
   // Methods
   instance.completeDay = completeDay;
-  // instance.renderHabitCard = renderHabitCard;
+  instance.generateHabitCard = generateHabitCard;
 
   return instance;
 };
@@ -52,33 +69,41 @@ var completeDay = function (note, done, rate) {
   }
 };
 
-// var renderAccount = function () {
-//   console.log(this);
-//   var $div = $("<div></div>");
-//   var $sectionTitle = $div.clone().attr({
-//     class: "section-title",
-//   });
-//   var $h1 = $("<h1></h1>").html(this.name + ": <span class=\"money-value\">" + this.balance + "</span>TND");
-//   $sectionTitle.append($h1);
+var generateHabitCard = function () {
+  console.log(this);
+  var $div = $("<div></div>");
+  var $card = $("<a></a>");
+  $card.attr({
+    class: "card habit-card",
+    href: "habit.html?habit=" + this.id,
+  });
+  var $title = $div
+    .clone()
+    .attr({
+      class: "card-title",
+    })
+    .text(this.name);
+  $card.append($title);
 
-//   var $sectionBody = $div.clone().attr({
-//     class: "section-body",
-//   });
-//   $div.attr({
-//     class: "column-section",
-//   });
-//   $table = generateTableWithHead(
-//     "Type",
-//     "From",
-//     "To",
-//     "Category",
-//     "Ammount",
-//     "Fee"
-//   );
-//   $table.append($tbody);
+  $div
+    .attr({
+      class: "card-body",
+    })
+    .html(`<p>${this.description}</p>`);
 
-//   $sectionBody.append($table);
-//   $div.append($sectionTitle);
-//   $div.append($sectionBody);
-//   $content.append($div);
-// };
+  $card.append($div);
+  return $card;
+};
+
+// retrieve stored Habits
+storedHabits = map(storedHabits, function (habit) {
+  return Habit(
+    habit.name,
+    habit.category,
+    habit.description,
+    habit.goal,
+    habit.id,
+    habit.streaks,
+    habit.goalAcheived
+  );
+});
