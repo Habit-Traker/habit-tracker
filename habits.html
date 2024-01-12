@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/grid.css">
+    <link rel="stylesheet" href="assets/style/inputs.css">
+    <link rel="stylesheet" href="assets/style/habits.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="logo-container">
+            <img class="logo-image" src="assets/images/logo.png" alt="">
+            <h1>Habitium</h1>
+            <p>The Never Ending Progress</p>
+        </div>
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a class="active" href="habits.html">Habits</a>
+            <a href="">Diary</a>
+        </nav>
+    </section>
+
+    <section class="body-section">
+        <div class="habits-layout">
+            <div class="card">
+                <div class="card-title">Habits List</div>
+                <div class="card-body">
+                    <div class="habits-grid">
+                        <div class="card habit-card">
+                            <div class="card-title">Lorem, ipsum dolor.</div>
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aperiam, consequuntur
+                                consectetur debitis est quam dolor sapiente quisquam numquam autem accusamus quod eius
+                                cumque repellat quidem dignissimos obcaecati asperiores repellendus?
+                            </div>
+                        </div>
+                        <div class="card habit-card">
+                            <div class="card-title">Lorem, ipsum dolor.</div>
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aperiam, consequuntur
+                                consectetur debitis est quam dolor sapiente quisquam numquam autem accusamus quod eius
+                                cumque repellat quidem dignissimos obcaecati asperiores repellendus?
+                            </div>
+                        </div>
+                        <div class="card habit-card">
+                            <div class="card-title">Lorem, ipsum dolor.</div>
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aperiam, consequuntur
+                                consectetur debitis est quam dolor sapiente quisquam numquam autem accusamus quod eius
+                                cumque repellat quidem dignissimos obcaecati asperiores repellendus?
+                            </div>
+                        </div>
+                        <div class="card habit-card">
+                            <div class="card-title">Lorem, ipsum dolor.</div>
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aperiam, consequuntur
+                                consectetur debitis est quam dolor sapiente quisquam numquam autem accusamus quod eius
+                                cumque repellat quidem dignissimos obcaecati asperiores repellendus?
+                            </div>
+                        </div>
+                        <div class="card habit-card">
+                            <div class="card-title">Lorem, ipsum dolor.</div>
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aperiam, consequuntur
+                                consectetur debitis est quam dolor sapiente quisquam numquam autem accusamus quod eius
+                                cumque repellat quidem dignissimos obcaecati asperiores repellendus?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="habits-form">
+                <div class="card">
+                    <div class="card-title">+ Add Habit</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="column col-50 input-col">
+                                <label for="name">Habit Name</label>
+                                <input class="habit-input" type="text" id="name" name="name" placeholder="Habit Name">
+                            </div>
+                            <div class="column col-33 input-col">
+                                <label for="name">Habit Name</label>
+                                <select class="habit-input">
+                                    <option value="Fitness">Fitness</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Work">Work</option>
+                                    <option value="Routine">Routine</option>
+                                </select>
+                            </div>
+                            <div class="column col-90 input-col">
+                                <label for="name">Habit Name</label>
+                                <textarea rows="5" class="habit-input" type="text" id="name" name="name"
+                                    placeholder="Habit Name"></textarea>
+                            </div>
+                            <div class="column col-33 input-col">
+                                <label for="name">Goal in Days</label>
+                                <input class="habit-input" min="1" type="number" id="name" name="name"
+                                    placeholder="Recommend 60">
+                            </div>
+                            <div class="column input-col">
+                                <button id="add-habit">Add New Habit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

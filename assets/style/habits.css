@@ -1,0 +1,25 @@
+.body-section .habits-layout {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+}
+
+.body-section .habits-layout .habits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  margin: auto;
+  padding: 30px 20px 20px 20px;
+}
+
+.body-section .habits-layout .habits-grid .habit-card {
+  width: 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+  margin: 20px 1.66% 10px 1.66%;
+  /* background-color: rgb(245, 250, 255); */
+}
+
+.body-section .habits-layout .habits-grid .habit-card .card-title {
+  font-size: 25px;
+  color: color-mix(in srgb, var(--contrast-color) 80%, rgb(139, 136, 53));
+}
