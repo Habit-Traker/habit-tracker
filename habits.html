@@ -69,6 +69,7 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aperiam, consequuntur
                                 consectetur debitis est quam dolor sapiente quisquam numquam autem accusamus quod eius
                                 cumque repellat quidem dignissimos obcaecati asperiores repellendus?
+                                <a href="habit.html?id=5">View</a>
                             </div>
                         </div>
                     </div>
@@ -80,12 +81,12 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="column col-50 input-col">
-                                <label for="name">Habit Name</label>
+                                <label for="name">Habit</label>
                                 <input class="habit-input" type="text" id="name" name="name" placeholder="Habit Name">
                             </div>
                             <div class="column col-33 input-col">
-                                <label for="name">Habit Name</label>
-                                <select class="habit-input">
+                                <label for="name">Category</label>
+                                <select id="category" name="category" class="habit-input">
                                     <option value="Fitness">Fitness</option>
                                     <option value="Health">Health</option>
                                     <option value="Education">Education</option>
@@ -94,14 +95,14 @@
                                 </select>
                             </div>
                             <div class="column col-90 input-col">
-                                <label for="name">Habit Name</label>
-                                <textarea rows="5" class="habit-input" type="text" id="name" name="name"
+                                <label for="description">Description</label>
+                                <textarea rows="5" class="habit-input" type="text" id="description" name="description"
                                     placeholder="Habit Name"></textarea>
                             </div>
                             <div class="column col-33 input-col">
-                                <label for="name">Goal in Days</label>
-                                <input class="habit-input" min="1" type="number" id="name" name="name"
-                                    placeholder="Recommend 60">
+                                <label for="goal">Goal in Days</label>
+                                <input class="habit-input" min="1" type="number" id="goal" name="goal"
+                                    placeholder="50 Days...">
                             </div>
                             <div class="column input-col">
                                 <button id="add-habit">Add New Habit</button>
@@ -114,7 +115,10 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="assets/scripts/callbacks.js"></script>
     <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/Habit.js"></script>
+    <script src="assets/scripts/habits-list.js"></script>
 </body>
 
 </html>
