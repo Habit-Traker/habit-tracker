@@ -22,7 +22,8 @@ var Habit = function (
   goal,
   id,
   streaks,
-  goalAcheived
+  goalAcheived,
+  progress
 ) {
   var instance = {};
   if (id === undefined) {
@@ -36,7 +37,7 @@ var Habit = function (
   instance.description = description;
   instance.goal = goal;
   instance.category = category;
-  instance.progress = [];
+
   if (streaks === undefined) {
     instance.streaks = 0; // How many days in a row
   } else {
@@ -46,6 +47,12 @@ var Habit = function (
     instance.goalAcheived = false;
   } else {
     instance.goalAcheived = goalAcheived;
+  }
+
+  if (progress === undefined) {
+    instance.progress = [];
+  } else {
+    instance.progress = progress;
   }
 
   // Methods
@@ -104,6 +111,7 @@ storedHabits = map(storedHabits, function (habit) {
     habit.goal,
     habit.id,
     habit.streaks,
-    habit.goalAcheived
+    habit.goalAcheived,
+    habit.progress
   );
 });
