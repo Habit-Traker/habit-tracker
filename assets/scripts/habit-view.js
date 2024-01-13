@@ -27,7 +27,7 @@ function displayHabit(habit) {
   }
   var avg = avgRating(habit.progress);
   $("#habit-avg-rating")
-    .append(`${avg.toFixed(2)}`)
+    .text(`${avg.toFixed(2)}`)
     .css({ color: "var(--primary)", "font-size": "25px" });
 
   $("#achieved");
@@ -48,15 +48,15 @@ var $done = $("input[name='habit-done']");
 var $submitday = $("#add-day");
 
 $submitday.on("click", function () {
+  console.log($("#done").is(":checked"));
+
   var validInputs = $('input[name="habit-rating"]:checked').val() !== undefined;
   if (validInputs) {
-    var newDay = {
-      note: $note.val(),
-      rate: $('input[name="habit-rating"]:checked').val(),
-      done: $("#check_id").is(":checked"),
-    };
-
-    currentHabit.progress.unshift(newDay);
+    currentHabit.completeDay(
+      $note.val(),
+      $("#done").is(":checked"),
+      $('input[name="habit-rating"]:checked').val()
+    );
   } else {
     alert(
       "you should  provide if  the habit '" +
@@ -64,8 +64,8 @@ $submitday.on("click", function () {
         " of the day is achived or not with it s rating for static"
     );
   }
-  console.log(storedHabits);
   localStorage.setItem("storedHabits", JSON.stringify(storedHabits));
+  displayHabit(currentHabit);
 });
 
 function avgRating(array) {

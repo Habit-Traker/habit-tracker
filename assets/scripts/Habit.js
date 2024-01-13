@@ -115,3 +115,4 @@ storedHabits = map(storedHabits, function (habit) {
     habit.progress
   );
 });
+
