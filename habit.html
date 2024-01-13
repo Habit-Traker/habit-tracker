@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/grid.css">
     <link rel="stylesheet" href="assets/style/habit.css">
     <link rel="stylesheet" href="assets/style/inputs.css">
 
@@ -30,11 +31,51 @@
             <div class="habit-info">
                 <div class="card">
                     <div class="card-body">
-                        <div class="habit-title">
-                            <h2>Eating Healthy </h2>
-                            <span> (Self Care ❤️)</span>
+                        <div class="row">
+                            <div class="column col-50">
+
+                                <div class="habit-title">
+                                    <h1 id="habit-name">Eating Healthy </h1>
+                                    <span>(<span id="habit-category"> Self Care ❤️</span>)</span>
+                                </div>
+                                <div class="habit-description">
+                                    <p id="habit-description">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam unde expedita
+                                        similique accusantium, fugiat, illum quod, dicta dolor omnis explicabo provident
+                                        eaque ex recusandae doloribus libero placeat perspiciatis alias possimus.
+                                        Reiciendis eaque incidunt asperiores id cumque ducimus provident sequi ullam
+                                        fugit pariatur! Quia aut distinctio eum enim facilis. Illo, voluptatum.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="column col-50">
+                                <div class="habit-title">
+                                    <h3>Goal: </h3>
+                                    <h2><span id="goal"></span> days</h2>
+                                </div>
+                            </div>
+                            <div class="column col-50">
+                                <div class="habit-title">
+                                    <h3>Current Streak: </h3>
+                                    <h2 id="streak"> 5</h2><span> Days in row</span>
+                                </div>
+                            </div>
+                            <div class="column col-50">
+                                <div class="habit-title">
+                                    <h3 id="achieved">Goal Achieved</h3>
+                                </div>
+                            </div>
+                            <div class="column col-90">
+                                <div class="habit-title">
+                                    <h3>Latest Progress: </h3>
+                                </div>
+                                <div class="row progress-ratio-bar">
+                                    <div id="green-ratio" class="green-ratio ratio"></div>
+                                    <div id="red-ratio" class="red-ratio ratio"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="habit-description"></div>
                     </div>
                 </div>
             </div>

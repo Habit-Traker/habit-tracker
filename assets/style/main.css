@@ -13,7 +13,7 @@
   --dark: #121619;
   --light: #edf4ed;
   --contrast-color: #e76f51;
-  
+
   /* 
   --primary-light: #abd1b5;
   --secondary: #555b6e;
@@ -30,7 +30,6 @@ body {
   font-family: Signika;
   background-image: url(../images/203518.jpg);
   background-size: cover;
-
 }
 
 /* header */
@@ -129,12 +128,19 @@ ul.habits-list {
 
 .habit-progress {
   display: grid;
-  grid-template-columns: 2fr 6fr;
-  margin: 40px 10px 40px 5px;
+  grid-template-columns: 3fr 6fr;
+  margin: 10px 10px 10px 5px;
+  padding: 20px 10px 10px 5px;
+  /* background-color:#edf4ed; */
+  background-color: aliceblue;
+  border-radius: 3px;
 }
 
 .habit-progress .habit-title {
-  margin: 0px 25px 0px 25px;
+  margin: 0px 10px 0px 25px;
+  font-size: large;
+  font-weight: bold;
+  color: var(--primary-dark);
 }
 .habit-progress .habit-progress-bar {
   display: flex;
@@ -163,4 +169,13 @@ ul.habits-list {
 
 .habit-progress .habit-progress-bar .not-done {
   background-color: var(--contrast-color);
+}
+
+a.habit-progress {
+  text-decoration: none;
+}
+a.habit-progress:hover {
+  background-color: rgb(221, 239, 255);
+  transform: translateX(12px);
+  transition: all ease-in .1s;
 }
