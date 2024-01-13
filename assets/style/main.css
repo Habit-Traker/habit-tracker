@@ -177,5 +177,5 @@ a.habit-progress {
 a.habit-progress:hover {
   background-color: rgb(221, 239, 255);
   transform: translateX(12px);
-  transition: all ease-in .1s;
+  transition: all ease-out .1s;
 }
