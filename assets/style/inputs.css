@@ -21,6 +21,10 @@
   flex: 0 0 19%;
 }
 
+.row .column.col-70 {
+  flex: 0 0 70%;
+}
+
 .row .column.col-90 {
   flex: 0 0 88%;
 }
