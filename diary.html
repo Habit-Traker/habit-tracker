@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/grid.css">
+    <link rel="stylesheet" href="assets/style/habit.css">
+    <link rel="stylesheet" href="assets/style/diary.css">
+    <link rel="stylesheet" href="assets/style/inputs.css">
+
+</head>
+
+<body>
+    <section class="header">
+        <div class="logo-container">
+            <img class="logo-image" src="assets/images/logo.png" alt="">
+            <h1>Habitium</h1>
+            <p>The Never Ending Progress</p>
+        </div>
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="habits.html">Habits</a>
+            <a href="diary.html">Diary</a>
+        </nav>
+    </section>
+
+    <section class="body-section">
+        <div class="container">
+            <div class="habit-info">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="login-container">
+                            <form id="loginForm">
+                                <h1>Login</h1>
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" required>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                                <button type="submit">Login</button>
+                            </form>
+                        </div>
+                        <div class="diary-container" id="diaryContainer">
+                            <h1>My Diary</h1>
+                            <div id="entries-container"></div>
+                            <textarea id="entry-input" placeholder="Write your entry..."></textarea>
+                            <button onclick="addEntry()">Add Entry</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="habit-section">
+                <div class="card">
+                    
+                </div>
+            </div>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="assets/scripts/callbacks.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/Habit.js"></script>
+    <script src="assets/scripts/habits-list.js"></script>
+    <script src="assets/scripts/habit-view.js"></script>
+</body>
+
+</html>

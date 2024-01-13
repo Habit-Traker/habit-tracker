@@ -22,7 +22,7 @@
         <nav class="nav-bar">
             <a href="index.html">Home</a>
             <a href="habits.html">Habits</a>
-            <a href="">Diary</a>
+            <a href="diary.html">Diary</a>
         </nav>
     </section>
 
@@ -52,7 +52,7 @@
                             <div class="column col-50">
                                 <div class="habit-title">
                                     <h3>Goal: </h3>
-                                    <h2><span id="goal"></span> days</h2>
+                                    <h2 style="color: var(--primary);"><span id="goal"></span> days</h2>
                                 </div>
                             </div>
                             <div class="column col-50">
@@ -63,13 +63,13 @@
                             </div>
                             <div class="column col-50">
                                 <div class="habit-title">
-                                    <h3 id="achieved">Goal Achieved</h3>
+                                    <h3 id="achieved">Average Rating <span style="color: var(--primary);" id="habit-avg-rating"></span></h3>
                                 </div>
                             </div>
                             <div class="column col-90">
                                 <div class="habit-title">
-                                    <h3>Latest Progress: </h3>
                                 </div>
+                                <h3>Latest Progress: <span id="progress"></span></h3>
                                 <div class="row progress-ratio-bar">
                                     <div id="green-ratio" class="green-ratio ratio"></div>
                                     <div id="red-ratio" class="red-ratio ratio"></div>
@@ -85,46 +85,51 @@
                     <div class="card-body">
                         <div class="row">
 
-                            <div class="column input-col">
+                            <div class="column col-90 input-col">
                                 <label>
-                                    today's note :
+                                    Today's Note
                                 </label>
-                                <input type="text" id="habit-note">
+                                <input class="habit-input" type="text" id="habit-note">
                             </div>
 
-                            <div class="column input-col input-col-radios">Rate today's performance:<br>
+                            <div class="column input-col input-col-radios">
                                 <input class="habit-radio" type="radio" name="habit-rating" value="1" />
                                 <label>
                                     Poor
                                 </label>
+                            </div>
+                            <div class="column input-col input-col-radios">
+
                                 <input class="habit-radio" type="radio" name="habit-rating" value="2" />
                                 <label>
                                     Fair
                                 </label>
+                            </div>
+                            <div class="column input-col input-col-radios">
                                 <input class="habit-radio" type="radio" name="habit-rating" value="3" />
                                 <label>
                                     Good
                                 </label>
+                            </div>
+                            <div class="column input-col input-col-radios">
                                 <input class="habit-radio" type="radio" name="habit-rating" value="4" />
                                 <label>
                                     Very Good
                                 </label>
+                            </div>
+                            <div class="column input-col input-col-radios">
                                 <input class="habit-radio" type="radio" name="habit-rating" value="5" />
                                 <label>
                                     Excellent
                                 </label>
-
                             </div>
 
-                            <div class="column input-col">Done :<br>
-                                <label>
-                                    <input class="habit-radio" type="radio" name="habit-done" value="true" />
-                                    Yes
+                            <div class="column input-col">
+                                <label style="display: inline;">
+                                    Done :
                                 </label>
-                                <label>
-                                    <input class="habit-radio" type="radio" name="habit-done" value="false" />
-                                    NO<br>
-                                </label>
+                                <input class="habit-radio" type="checkbox" name="done" value="true"
+                                    style="display: inline;" />
 
                                 <button id="add-day"> Submit current day</button>
 
