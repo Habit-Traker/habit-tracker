@@ -16,10 +16,10 @@
 .body-section .habits-layout .habits-grid .habit-card {
   text-decoration: none;
   color: black;
-  width: 30%;
-  flex: 0 0 30%;
-  max-width: 30%;
-  margin: 20px 1.66% 10px 1.66%;
+  width: 45%;
+  flex: 0 0 45%;
+  max-width: 45%;
+  margin: 20px 2.5% 10px 2.5%;
   /* background-color: rgb(245, 250, 255); */
 }
 
